@@ -12,7 +12,6 @@ class PostController extends Controller
             ->join('posts','users.id','=','posts.user_id')
             ->select('users.name','posts.title','posts.body')
             ->get();
-
         return $request ;
                  
     }
