@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController ;
+use App\Http\Controllers\UploadController ;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route :: get('/inner-join',[PostController::class,'innerjoinclauses'])->name('inner.join');
+
+Route ::get('/upload', [UploadController::class, 'uploadfunction']);
+Route ::post('/upload', [UploadController::class, 'uploadpost'])->name('upload.file');
+
